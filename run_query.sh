@@ -26,7 +26,7 @@ done
 }
 
 if [ $# -eq 0 ]; then
-  run mysql_r
+  run tidb_r
 else
   run $*
 fi
