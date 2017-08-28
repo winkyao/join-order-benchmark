@@ -17,7 +17,7 @@ for file in `ls queries/*.sql`; do
   errorfile=$OUTDIR/$name.err
   echo "run $file > $outputfile"
   start=$(date +%s)
-  mysql -u root -P 4000 -D imdbload < $file >$outputfile 2> $errorfile
+  mysql -u root -h 127.0.0.1 -P 4000 -D imdbload < $file >$outputfile 2> $errorfile
   #mysql -u root -p123456 -D imdbload < $file
   end=$(date +%s)
   elapsed=$(( $end - $start ))
