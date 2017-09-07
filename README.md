@@ -15,3 +15,7 @@ The CSV files used in the paper, which are from May 2013, can be found at http:/
 ### load
 
 use `load_data.sh` to load data into mysql or TiDB.
+
+### order problem
+
+`queries/17b.sql` and `queries/8d.sql` have order problem, because we use diffrent order rule from MySQL, so it is not a real bug.
