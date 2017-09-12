@@ -19,3 +19,6 @@ use `load_data.sh` to load data into mysql or TiDB.
 ### order problem
 
 `queries/17b.sql` and `queries/8d.sql` have order problem, because we use diffrent order rule from MySQL, so it is not a real bug.
+
+### use analyze table to make TiDB faster
+exec `analyze_table.sql`
