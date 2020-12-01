@@ -1,3 +1,11 @@
+# Introduction
+
+This is a clone of original repo:
+https://github.com/winkyao/join-order-benchmark
+
+Additional fixes on top of original code:
+- ...
+
 # join-order-benchmark
 
 This package contains the Join Order Benchmark (JOB) queries from:
