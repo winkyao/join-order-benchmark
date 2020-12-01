@@ -21,3 +21,4 @@ create index person_id_cast_info on cast_info(person_id);
 create index person_id_person_info on person_info(person_id);
 create index person_role_id_cast_info on cast_info(person_role_id);
 create index role_id_cast_info on cast_info(role_id);
+create index keyword_id_keyword on keyword(keyword);
