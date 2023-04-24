@@ -22,11 +22,11 @@ load_data() {
     bname=${csv_file%.*}
     sql_file="$bname.sql"
     table=${bname#$PREFIX}
-    sql="LOAD DATA LOCAL INFILE '$csv_file' INTO TABLE $table FIELDS TERMINATED BY ',';"
+    sql="LOAD DATA LOCAL INFILE '$csv_file' INTO TABLE $table FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '\"';"
     echo $sql > $sql_file
     echo $sql_file
     {
-       mysql -h 127.0.0.1 -P 4000 -u root -D imdbload < $sql_file
+       mysql --local-infile=1 -h 127.0.0.1 -P 4000 -u root -D imdbload < $sql_file
        echo >&1000
     }& 
   done
